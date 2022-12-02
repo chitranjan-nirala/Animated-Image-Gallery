@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+.main{
+  background-image: url('blue\ sky.jpg');
+  -webkit-transition: all 440ms ease-in;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Slabo 27px', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  backdrop-filter: blur(4px);
+  background-size: 1920px 1080px;
+  background-attachment: fixed;
+  background-position:cent;
+  background-repeat: no-repeat;
+ 
+}
+h3{
+  color: rgb(255, 217, 219);
+}
+
+.container {
+  display: flex;
+  width: 80vw;
+  filter: blur(0);
+}
+
+.photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  border-radius: 30px 10px;
+  color: rgb(222, 201, 201);
+  cursor: pointer;
+  flex: 0.5;
+  margin: 4px;
+  position:relative;
+  -webkit-transition: all 440ms ease-in-out;
+ 
+}
+
+.photo h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+.photo:hover {
+   -ms-transform: scale(1.1); 
+
+  transform: scale(1.1); 
+}
+
+.photo.active {
+ flex: 25%;
+}
+
+.photo.active h3 {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 200vw;
+  }
+
+  .photo:nth-of-type(4),
+  .photo:nth-of-type(5) {
+display: none;
+  }
+}
